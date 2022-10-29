@@ -23,7 +23,7 @@ public class registro {
             System.out.print("Ingresa contrasena del estudiante: ");
             student.passwd = read.next();
             variable.passwords[id] = student.passwd;
-
+        //la contrasena debe ser mayor o igual a 8 digitoss
             if (variable.passwords[id].length() >=8) {
                 System.out.print("Usuario "+student.getStudent_name()+" creado exitosamente\n");
                 
@@ -105,6 +105,7 @@ public class registro {
         String actual_passwd="";
         System.out.print("Ingresa la antigua contrasena del estudiante: ");
         actual_passwd = read.next();
+        //si la contrasena actual es igual a la que coloco entonces se puede agregar una nueva
         if (actual_passwd.equals(variable.passwords[id])) {
             System.out.print("Ingresa la nueva contrasena del estudiante: ");
             variable.passwords[id] = read.next();

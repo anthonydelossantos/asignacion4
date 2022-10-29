@@ -5,6 +5,10 @@
  * Dioryettee Flores
  * Daniel Dias */
 public class Student {
+    /*Se creo una clase llamada Student como maqueta para cada estudiante
+     * ya que antes de ingresar la información al array (nuestra "base de datos") necesitamos validarla y sanitizarla 
+     * por lo cual nos sirve para este objetivo.
+     */
     String name, passwd;
     double[] grades = new double[5];
 

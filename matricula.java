@@ -38,7 +38,6 @@ public class matricula {
                     String nombre;
                     System.out.print("Ingresa el nombre del estudiante: ");
                     nombre = read.next();
-
                     register.getGreades(nombre);
                     break;
                 case 3:
