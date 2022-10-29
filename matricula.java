@@ -1,5 +1,12 @@
 /**
  * matricula
+ * 
+ * integrantes:
+ * Anthony De Los Santos 
+ * Aurora Guevara
+ * Cristian Acuna
+ * Dioryettee Flores
+ * Daniel Dias
  */
 import java.util.*;
 public class matricula {
