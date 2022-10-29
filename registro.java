@@ -108,6 +108,7 @@ public class registro {
         if (actual_passwd.equals(variable.passwords[id])) {
             System.out.print("Ingresa la nueva contrasena del estudiante: ");
             variable.passwords[id] = read.next();
+            System.out.print("Contrasena Restablecida Correctamente.");
             
         }
 
