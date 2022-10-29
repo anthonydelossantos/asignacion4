@@ -7,7 +7,6 @@ public class matricula {
     public static void main(String[] args) {
  
         //objetos
-        Student student = new Student();
         Scanner read = new Scanner(System.in);
         registro register = new registro();
         
@@ -15,26 +14,36 @@ public class matricula {
 
         
         //menu
-        int opcion=0, condicion =1;
+        int opcion=0, condicion =1, count=0;
         while (condicion>0) {
-
-            System.out.println("Matricula Estudiantil:\n1)Agregar Estudiante Nuevo.\n2)Mostrar Notas de Estudiante y Promedio.\n3)Restablecer Contrasena\n4) Salir.");
+            try {
+                System.out.println("Matricula Estudiantil:\n1)Agregar Estudiante Nuevo.\n2)Mostrar Notas de Estudiante y Promedio.\n3)Restablecer Contrasena\n4) Mostrar usuarios registrados \n5) Salir.");
             System.out.print("-> ");
             opcion = read.nextInt();
 
             switch (opcion) {
                 case 1:
-                    register.newUser();
+                    register.newUser(count);
+                    count +=1;
                     
                     break;
                 case 2:
-                    register.getGreades(student.name);
+                    String nombre;
+                    System.out.print("Ingresa el nombre del estudiante: ");
+                    nombre = read.next();
+
+                    register.getGreades(nombre);
                     break;
                 case 3:
-                    register.resetPassword(student.name);
+                    System.out.print("Ingresa el nombre del estudiante: ");
+                    nombre = read.next();
+                    register.resetPassword(nombre);
                     
                     break;
                 case 4:
+                    register.getUsernames();
+                    break;
+                case 5:
                     condicion = 0;
                     break; 
             
@@ -42,6 +51,12 @@ public class matricula {
                     System.out.println("ERROR: Elige alguna de las opciones dentro del Menu.");
                     break;
             }
+                
+            } catch (Exception e) {
+                System.out.println("ERROR!");
+            }
+
+            
             
         }
         
